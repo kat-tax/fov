@@ -1,0 +1,50 @@
+{
+  "name": "storybook-web",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "storybook dev -p 6006 --no-open",
+    "build": "storybook build -o ../../../output/storybook"
+  },
+  "dependencies": {
+    "@lingui/core": "^5.2.0",
+    "@lingui/macro": "^5.2.0",
+    "@lingui/react": "^5.2.0",
+    "@storybook/blocks": "^8.4.7",
+    "design": "workspace:react-exo-ui@*",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-exo": "0.18.27",
+    "react-exo-ui": "workspace:*",
+    "react-native": "^0.76.5",
+    "react-native-readium": "^2.0.2",
+    "react-native-svg": "^15.10.1",
+    "react-native-web": "^0.19.13",
+    "storybook-common": "workspace:*",
+    "vite-plugin-node-polyfills": "^0.22.0"
+  },
+  "devDependencies": {
+    "@iconify/react": "^5.1.0",
+    "@storybook/addon-a11y": "^8.4.7",
+    "@storybook/addon-designs": "^8.0.4",
+    "@storybook/addon-essentials": "8.4.7",
+    "@storybook/addon-interactions": "8.4.7",
+    "@storybook/addon-links": "8.4.7",
+    "@storybook/builder-vite": "8.4.7",
+    "@storybook/manager-api": "8.4.7",
+    "@storybook/react": "8.4.7",
+    "@storybook/react-vite": "8.4.7",
+    "@storybook/theming": "8.4.7",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "client": "workspace:*",
+    "config": "workspace:*",
+    "storybook": "8.4.7",
+    "typescript": "^5.7.2"
+  },
+  "browserslist": {
+    "production": ">0.2%, not dead, not op_mini all",
+    "development": "last 2 versions"
+  }
+}

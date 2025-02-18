@@ -1,0 +1,7 @@
+packages:
+  - 'native/**'
+  - 'client/**'
+  - 'design/**'
+  - 'locales/**'
+  - 'toolkit/**'
+  - '!**/test/**'

@@ -1,0 +1,39 @@
+diff --git a/index.mjs b/index.mjs
+index b02236edff48231934b4cef8fc80b475e8f9e146..03c9fd0eac9595f6b86f17979ea1e9d029243484 100644
+--- a/index.mjs
++++ b/index.mjs
+@@ -1,6 +1,6 @@
+ import * as React5 from 'react';
+ import React5__default, { createContext, useMemo, forwardRef, useRef, useCallback, useEffect, useImperativeHandle, useSyncExternalStore, useContext, useState, useLayoutEffect } from 'react';
+-import { Animated, ScrollView, View, Dimensions, StyleSheet, Platform, useAnimatedValue as useAnimatedValue$1 } from 'react-native';
++import { Animated, ScrollView, View, Dimensions, StyleSheet, Platform } from 'react-native';
+ 
+ // src/LegendList.tsx
+ var ContextState = React5.createContext(null);
+@@ -142,9 +142,9 @@ function useRecyclingState(valueOrFun) {
+   return stateInfo;
+ }
+ var LeanView = React5.forwardRef((props, ref) => {
+-  return React5.createElement("RCTView", { ...props, ref });
++  return React5.createElement("div", { ...props, ref });
+ });
+-LeanView.displayName = "RCTView";
++LeanView.displayName = "div";
+ 
+ // src/constants.ts
+ var POSITION_OUT_OF_VIEW = -1e7;
+@@ -226,11 +226,11 @@ var Container = ({
+   const contentFragment = /* @__PURE__ */ React5__default.createElement(React5__default.Fragment, { key: recycleItems ? void 0 : itemKey }, /* @__PURE__ */ React5__default.createElement(ContextContainer.Provider, { value: contextValue }, renderedItem, renderedItem && ItemSeparatorComponent && itemKey !== lastItemKey && ItemSeparatorComponent));
+   if (maintainVisibleContentPosition) {
+     const anchorStyle = position.type === "top" ? { position: "absolute", top: 0, left: 0, right: 0 } : { position: "absolute", bottom: 0, left: 0, right: 0 };
+-    return /* @__PURE__ */ React5__default.createElement(LeanView, { style }, /* @__PURE__ */ React5__default.createElement(LeanView, { style: anchorStyle, onLayout, ref }, contentFragment));
++    return /* @__PURE__ */ React5__default.createElement(LeanView, { style }, /* @__PURE__ */ React5__default.createElement(LeanView, { style: anchorStyle, ref }, contentFragment));
+   }
+-  return /* @__PURE__ */ React5__default.createElement(LeanView, { style, onLayout, ref }, contentFragment);
++  return /* @__PURE__ */ React5__default.createElement(LeanView, { style, ref }, contentFragment);
+ };
+-var useAnimatedValue = useAnimatedValue$1 || ((initialValue) => {
++var useAnimatedValue = ((initialValue) => {
+   return useRef(new Animated.Value(initialValue)).current;
+ });
+ function useValue$(key, getValue, useMicrotask) {

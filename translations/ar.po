@@ -1,0 +1,604 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2024-12-31 16:37-0600\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: @lingui/cli\n"
+"Language: ar\n"
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"PO-Revision-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Plural-Forms: \n"
+
+#. placeholder {0}: 5
+#. placeholder {0}: 11
+#: ../../client/src/dev/routes/screen-library.tsx:21
+#: ../../client/src/dev/routes/screen-design.tsx:15
+msgid "{0} components"
+msgstr "{0} مكونات"
+
+#: ../../client/src/media/file/file-zip.tsx:23
+#: ../../client/src/media/file/file-torrent.tsx:24
+#: ../../client/src/media/file/file-directory.tsx:24
+msgid "{files, plural, one {# file} other {# files}}"
+msgstr "{files, plural, one {# ملف} other {# ملفات}}"
+
+#: ../../client/src/media/file/file-directory.tsx:23
+msgid "{folders, plural, one {# folder} other {# folders}}"
+msgstr "{folders, plural, one {# مجلد} other {# ملفات}}"
+
+#: ../../client/src/app/routes/screen-settings.tsx:217
+msgid "<matrix access token>"
+msgstr "<رمز وصول ماتريكس>"
+
+#: ../../client/src/app/routes/screen-settings.tsx:50
+msgid "A mnemonic phrase for authentication."
+msgstr "عبارة تذكيرية للمصادقة."
+
+#: ../../client/src/app/hooks/use-settings.ts:96
+msgid "Are you sure you want to change the owner key? This will reset the local database. This action cannot be undone."
+msgstr "هل أنت متأكد من أنك تريد تغيير مفتاح المالك؟ سيؤدي هذا إلى إعادة تعيين قاعدة البيانات المحلية. لا يمكن التراجع عن هذا الإجراء."
+
+#: ../../client/src/app/hooks/use-settings.ts:103
+msgid "Are you sure you want to reset your filesystem? This will delete all files."
+msgstr "هل أنت متأكد من أنك تريد إعادة تعيين نظام الملفات الخاص بك؟ سيؤدي هذا إلى حذف جميع الملفات."
+
+#: ../../client/src/app/hooks/use-settings.ts:90
+msgid "Are you sure you want to reset your local database? If data is not backed up on another device, it will be lost. This action cannot be undone."
+msgstr "هل أنت متأكد من أنك تريد إعادة تعيين قاعدة البيانات المحلية؟ إذا لم يتم نسخ البيانات احتياطيًا على جهاز آخر، فستفقد. لا يمكن التراجع عن هذا الإجراء."
+
+#: ../../client/src/app/hooks/use-settings.ts:81
+msgid "Are you sure you want to reset your prompt history?"
+msgstr "هل أنت متأكد من أنك تريد إعادة تعيين سجل المطالبات الخاص بك؟"
+
+#: ../../client/src/home/stacks/assistant.tsx:50
+msgid "Ask anything..."
+msgstr "اسأل أي شيء..."
+
+#: ../../client/src/app/routes/screen-settings.tsx:80
+#: ../../client/src/app/routes/screen-settings.tsx:100
+msgid "Auto"
+msgstr "تلقائي"
+
+#: ../../client/src/media/hooks/use-media-name.ts:23
+#: ../../client/src/app/routes/menu/index.tsx:137
+msgid "Books"
+msgstr "الكتب"
+
+#. placeholder {0}: data.metadata.author
+#: ../../client/src/media/file/file-book.tsx:42
+msgid "by {0}"
+msgstr "بواسطة {0}"
+
+#: ../../client/src/world/routes/screen-world.tsx:29
+#: ../../client/src/app/routes/menu/index.tsx:154
+msgid "Calendar"
+msgstr "التقويم"
+
+#: ../../client/src/app/routes/screen-settings.tsx:114
+msgid "Celsius"
+msgstr "سيلزيوس"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:298
+msgid "Close"
+msgstr "إغلاق"
+
+#: ../../client/src/media/dir/stacks/menu-hfs.tsx:37
+msgid "Compress"
+msgstr "ضغط"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:72
+#: ../../client/src/media/dir/stacks/menu-hfs.tsx:55
+msgid "Copy"
+msgstr "نسخ"
+
+#: ../../client/src/app/routes/menu/index.tsx:91
+msgid "Create Folder"
+msgstr "إنشاء مجلد"
+
+#: ../../client/src/app/routes/screen-settings.tsx:102
+msgid "Dark"
+msgstr "داكن"
+
+#: ../../client/src/app/routes/menu/index.tsx:41
+#: ../../client/src/app/routes/menu/index.tsx:76
+msgid "Dashboard"
+msgstr "لوحة التحكم"
+
+#: ../../client/src/app/routes/screen-settings.tsx:224
+msgid "Data"
+msgstr "البيانات"
+
+#: ../../client/src/app/routes/screen-settings.tsx:236
+msgid "Database"
+msgstr "قاعدة البيانات"
+
+#: ../../client/src/media/dir/stacks/menu-hfs.tsx:80
+msgid "Delete"
+msgstr "حذف"
+
+#: ../../client/src/app/routes/screen-settings.tsx:247
+msgid "Delete all local files."
+msgstr "حذف جميع الملفات المحلية."
+
+#: ../../client/src/app/routes/screen-settings.tsx:227
+msgid "Delete all local prompt data."
+msgstr "حذف جميع بيانات المطالبات المحلية."
+
+#: ../../client/src/app/routes/screen-settings.tsx:239
+msgid "Delete Database"
+msgstr "حذف قاعدة البيانات"
+
+#: ../../client/src/app/routes/screen-settings.tsx:249
+msgid "Delete Filesystem"
+msgstr "حذف نظام الملفات"
+
+#: ../../client/src/app/routes/screen-settings.tsx:229
+msgid "Delete Prompts"
+msgstr "حذف المطالبات"
+
+#: ../../client/src/app/routes/screen-settings.tsx:237
+msgid "Delete the local database."
+msgstr "حذف قاعدة البيانات المحلية."
+
+#: ../../client/src/dev/routes/screen-design.tsx:14
+#: ../../client/src/app/routes/menu/index.tsx:188
+msgid "Design"
+msgstr "التصميم"
+
+#: ../../client/src/app/routes/menu/index.tsx:173
+msgid "Dev Mode"
+msgstr "وضع المطور"
+
+#: ../../client/src/app/routes/screen-storage.tsx:28
+msgid "Device Space"
+msgstr "مساحة الجهاز"
+
+#: ../../client/src/media/stacks/list/empty.tsx:25
+msgid "Directory empty. Drop items or select folder to import."
+msgstr "المجلد فارغ. اسحب العناصر أو حدد مجلداً للاستيراد."
+
+#: ../../client/src/media/stacks/list/empty.tsx:24
+msgid "Directory empty. Select folder to import."
+msgstr "المجلد فارغ. حدد مجلداً للاستيراد."
+
+#: ../../client/src/app/routes/screen-settings.tsx:70
+msgid "Display"
+msgstr "العرض"
+
+#: ../../client/src/app/routes/screen-settings.tsx:119
+msgid "Distance"
+msgstr "المسافة"
+
+#: ../../client/src/app/routes/menu/index.tsx:112
+msgid "Docs"
+msgstr "المستندات"
+
+#: ../../client/src/media/hooks/use-media-name.ts:13
+msgid "Documents"
+msgstr "المستندات"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:91
+#: ../../client/src/media/file/file-binary.tsx:36
+#: ../../client/src/media/dir/stacks/menu-torrent.tsx:23
+#: ../../client/src/media/dir/stacks/menu-hfs.tsx:44
+msgid "Download"
+msgstr "تحميل"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:81
+msgid "Edit"
+msgstr "تعديل"
+
+#: ../../client/src/home/routes/screen-home.tsx:30
+msgid "Enjoy the day"
+msgstr "استمتع باليوم"
+
+#: ../../client/src/home/routes/screen-home.tsx:28
+msgid "Enjoy the night"
+msgstr "استمتع بالليل"
+
+#: ../../client/src/app/routes/menu/index.tsx:93
+msgid "Enter folder name"
+msgstr "أدخل اسم المجلد"
+
+#: ../../client/src/app/routes/screen-settings.tsx:44
+msgid "Enter name"
+msgstr "أدخل الاسم"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:101
+#: ../../client/src/media/dir/stacks/menu-zip.tsx:23
+msgid "Extract"
+msgstr "استخراج"
+
+#: ../../client/src/app/routes/screen-settings.tsx:115
+msgid "Fahrenheit"
+msgstr "فهرنهايت"
+
+#: ../../client/src/app/routes/screen-teaser.tsx:15
+msgid "Feature in development..."
+msgstr "الميزة قيد التطوير..."
+
+#: ../../client/src/media/stacks/media.tsx:88
+#: ../../client/src/media/stacks/list/bar.tsx:52
+#: ../../client/src/media/hooks/use-media-name.ts:25
+#: ../../client/src/app/routes/menu/index.tsx:51
+#: ../../client/src/app/routes/menu/index.tsx:107
+msgid "Files"
+msgstr "الملفات"
+
+#: ../../client/src/app/routes/screen-settings.tsx:246
+msgid "Filesystem"
+msgstr "نظام الملفات"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:288
+msgid "Fullscreen"
+msgstr "ملء الشاشة"
+
+#: ../../client/src/media/hooks/use-media-name.ts:21
+#: ../../client/src/app/routes/menu/index.tsx:132
+msgid "Games"
+msgstr "الألعاب"
+
+#: ../../client/src/app/hooks/use-device.ts:56
+msgid "Geolocation Error"
+msgstr "خطأ في تحديد الموقع"
+
+#: ../../client/src/home/routes/screen-home.tsx:24
+msgid "Good afternoon"
+msgstr "مساء الخير"
+
+#: ../../client/src/home/routes/screen-home.tsx:26
+msgid "Good evening"
+msgstr "مساء الخير"
+
+#: ../../client/src/home/routes/screen-home.tsx:22
+msgid "Good morning"
+msgstr "صباح الخير"
+
+#: ../../client/src/app/routes/screen-settings.tsx:134
+msgid "Groq API Key"
+msgstr "مفتاح Groq API"
+
+#: ../../client/src/home/hooks/use-ai.tsx:44
+msgid "Groq Failure"
+msgstr "فشل Groq"
+
+#: ../../client/src/app/routes/screen-settings.tsx:147
+msgid "Groq Model ID"
+msgstr "معرف نموذج Groq"
+
+#: ../../client/src/app/routes/menu/menu-header.tsx:27
+msgid "Human"
+msgstr "إنسان"
+
+#: ../../client/src/app/routes/menu/index.tsx:102
+msgid "Import Files"
+msgstr "استيراد الملفات"
+
+#: ../../client/src/media/stacks/list/empty.tsx:26
+msgid "Import Folder"
+msgstr "استيراد مجلد"
+
+#: ../../client/src/app/routes/menu/index.tsx:46
+#: ../../client/src/app/routes/menu/index.tsx:81
+msgid "Inbox"
+msgstr "الإشعارات"
+
+#: ../../client/src/app/routes/screen-settings.tsx:127
+msgid "Kilometers"
+msgstr "كيلومترات"
+
+#: ../../client/src/app/routes/screen-settings.tsx:72
+msgid "Language"
+msgstr "اللغة"
+
+#: ../../client/src/dev/routes/screen-library.tsx:20
+#: ../../client/src/app/routes/menu/index.tsx:193
+msgid "Library"
+msgstr "المكتبة"
+
+#: ../../client/src/app/routes/screen-settings.tsx:101
+msgid "Light"
+msgstr "فاتح"
+
+#: ../../client/src/home/hooks/use-weather.ts:11
+msgid "Loading..."
+msgstr "جاري التحميل..."
+
+#: ../../client/src/app/routes/screen-settings.tsx:25
+msgid "Manage your settings"
+msgstr "إدارة إعداداتك"
+
+#: ../../client/src/app/routes/screen-storage.tsx:24
+msgid "Manage your storage"
+msgstr "إدارة التخزين الخاص بك"
+
+#: ../../client/src/world/routes/screen-world.tsx:17
+#: ../../client/src/app/routes/menu/index.tsx:144
+msgid "Map"
+msgstr "الخريطة"
+
+#: ../../client/src/app/routes/screen-settings.tsx:174
+msgid "Maptiler API Key"
+msgstr "مفتاح Maptiler API"
+
+#: ../../client/src/app/routes/screen-settings.tsx:162
+msgid "Maptiler URL"
+msgstr "رابط Maptiler"
+
+#: ../../client/src/app/routes/screen-settings.tsx:211
+msgid "Matrix Access Token"
+msgstr "رمز وصول ماتريكس"
+
+#: ../../client/src/app/routes/screen-settings.tsx:199
+msgid "Matrix Base URL"
+msgstr "رابط ماتريكس الأساسي"
+
+#: ../../client/src/app/routes/screen-settings.tsx:187
+msgid "Matrix User ID"
+msgstr "معرف مستخدم ماتريكس"
+
+#: ../../client/src/app/routes/menu/index.tsx:86
+msgid "Media"
+msgstr "الوسائط"
+
+#: ../../client/src/app/routes/screen-settings.tsx:128
+msgid "Miles"
+msgstr "أميال"
+
+#: ../../client/src/media/dir/stacks/menu-hfs.tsx:62
+msgid "Move"
+msgstr "نقل"
+
+#: ../../client/src/media/hooks/use-media-name.ts:15
+#: ../../client/src/app/routes/menu/index.tsx:117
+msgid "Music"
+msgstr "الموسيقى"
+
+#: ../../client/src/world/routes/screen-world.tsx:23
+#: ../../client/src/app/routes/menu/index.tsx:149
+msgid "News"
+msgstr "الأخبار"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:209
+msgid "Next"
+msgstr "التالي"
+
+#: ../../client/src/world/routes/screen-calendar.tsx:41
+msgid "No events scheduled."
+msgstr "لا توجد أحداث مجدولة."
+
+#: ../../client/src/media/dir/stacks/menu-hfs.tsx:23
+msgid "Open"
+msgstr "فتح"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:243
+msgid "Options"
+msgstr "الخيارات"
+
+#: ../../client/src/app/routes/screen-storage.tsx:26
+msgid "Overview"
+msgstr "نظرة عامة"
+
+#: ../../client/src/app/routes/screen-settings.tsx:49
+msgid "Owner Key"
+msgstr "مفتاح المالك"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:144
+msgid "Pause"
+msgstr "إيقاف مؤقت"
+
+#: ../../client/src/media/hooks/use-media-name.ts:17
+#: ../../client/src/app/routes/menu/index.tsx:122
+msgid "Pictures"
+msgstr "الصور"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:254
+msgid "Pin"
+msgstr "تثبيت"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:145
+msgid "Play"
+msgstr "تشغيل"
+
+#: ../../client/src/home/stacks/assistant.tsx:50
+msgid "Please set your Groq API Key"
+msgstr "يرجى تعيين مفتاح Groq API الخاص بك"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:198
+msgid "Previous"
+msgstr "السابق"
+
+#: ../../client/src/app/routes/screen-settings.tsx:35
+msgid "Profile"
+msgstr "الملف الشخصي"
+
+#: ../../client/src/app/hooks/use-settings.ts:83
+msgid "Prompt History Reset"
+msgstr "إعادة تعيين سجل المطالبات"
+
+#: ../../client/src/app/routes/screen-settings.tsx:226
+msgid "Prompts"
+msgstr "المطالبات"
+
+#: ../../client/src/app/routes/screen-settings.tsx:200
+msgid "Provide a base url to use social features."
+msgstr "قدم رابطاً أساسياً لاستخدام الميزات الاجتماعية."
+
+#: ../../client/src/app/routes/screen-settings.tsx:135
+msgid "Provide a key to use AI features."
+msgstr "قدم مفتاحاً لاستخدام ميزات الذكاء الاصطناعي."
+
+#: ../../client/src/app/routes/screen-settings.tsx:175
+msgid "Provide a key to use map features."
+msgstr "قدم مفتاحاً لاستخدام ميزات الخريطة."
+
+#: ../../client/src/app/routes/screen-settings.tsx:188
+msgid "Provide a matrix user to use social features."
+msgstr "قدم مستخدم ماتريكس لاستخدام الميزات الاجتماعية."
+
+#: ../../client/src/app/routes/screen-settings.tsx:212
+msgid "Provide a token to use social features."
+msgstr "قدم رمزاً لاستخدام الميزات الاجتماعية."
+
+#: ../../client/src/app/routes/screen-settings.tsx:163
+msgid "Provide a url to use map features."
+msgstr "قدم رابطاً لاستخدام ميزات الخريطة."
+
+#: ../../client/src/media/dir/stacks/menu-hfs.tsx:69
+msgid "Rename"
+msgstr "إعادة تسمية"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:186
+msgid "Replay"
+msgstr "إعادة التشغيل"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:111
+msgid "Search"
+msgstr "بحث"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:62
+msgid "Select all"
+msgstr "اختر الكل"
+
+#: ../../client/src/app/routes/screen-settings.tsx:148
+msgid "Select the AI model to use."
+msgstr "اختر نموذج الذكاء الاصطناعي للاستخدام."
+
+#: ../../client/src/app/routes/screen-settings.tsx:120
+msgid "Select the distance unit for the app."
+msgstr "اختر وحدة المسافة للتطبيق."
+
+#: ../../client/src/app/routes/screen-settings.tsx:73
+msgid "Select the language for the app."
+msgstr "اختر لغة التطبيق."
+
+#: ../../client/src/app/routes/screen-settings.tsx:107
+msgid "Select the temperature unit for the app."
+msgstr "اختر وحدة درجة الحرارة للتطبيق."
+
+#: ../../client/src/app/routes/screen-settings.tsx:93
+msgid "Select the theme for the app."
+msgstr "اختر سمة التطبيق."
+
+#: ../../client/src/app/routes/screen-settings.tsx:132
+msgid "Services"
+msgstr "الخدمات"
+
+#: ../../client/src/app/routes/screen-settings.tsx:24
+#: ../../client/src/app/routes/menu/index.tsx:61
+#: ../../client/src/app/routes/menu/index.tsx:210
+msgid "Settings"
+msgstr "الإعدادات"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:268
+#: ../../client/src/media/dir/stacks/menu-hfs.tsx:30
+msgid "Share"
+msgstr "مشاركة"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:164
+msgid "Skip backward"
+msgstr "تخطي للخلف"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:175
+msgid "Skip forward"
+msgstr "تخطي للأمام"
+
+#: ../../client/src/app/routes/screen-storage.tsx:23
+#: ../../client/src/app/routes/menu/index.tsx:204
+msgid "Storage"
+msgstr "التخزين"
+
+#: ../../client/src/app/routes/screen-storage.tsx:29
+msgid "Storage used and available on this device."
+msgstr "التخزين المستخدم والمتاح على هذا الجهاز."
+
+#: ../../client/src/app/routes/screen-settings.tsx:106
+msgid "Temperature"
+msgstr "درجة الحرارة"
+
+#: ../../client/src/app/routes/screen-settings.tsx:92
+msgid "Theme"
+msgstr "السمة"
+
+#: ../../client/src/media/file/file-binary.tsx:35
+msgid "This file can not be previewed."
+msgstr "لا يمكن معاينة هذا الملف."
+
+#: ../../client/src/app/routes/menu/index.tsx:177
+msgid "Toggle Dev Mode"
+msgstr ""
+
+#: ../../client/src/media/hooks/use-media-name.ts:11
+msgid "Transfers"
+msgstr "التحويلات"
+
+#: ../../client/src/media/file/file-binary.tsx:30
+msgid "Unsupported File"
+msgstr "ملف غير مدعوم"
+
+#: ../../client/src/app/routes/screen-settings.tsx:37
+msgid "User Name"
+msgstr "اسم المستخدم"
+
+#: ../../client/src/media/hooks/use-media-name.ts:19
+#: ../../client/src/app/routes/menu/index.tsx:127
+msgid "Videos"
+msgstr "الفيديوهات"
+
+#: ../../client/src/world/routes/screen-world.tsx:18
+msgid "View your device locations and geo-related info"
+msgstr "عرض مواقع جهازك والمعلومات الجغرافية المتعلقة"
+
+#: ../../client/src/world/routes/screen-world.tsx:30
+msgid "View your events and time-related info"
+msgstr "عرض أحداثك والمعلومات المتعلقة بالوقت"
+
+#: ../../client/src/world/routes/screen-world.tsx:24
+msgid "View your latest news and rss feeds"
+msgstr "عرض آخر الأخبار وتغذيات RSS الخاصة بك"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:231
+msgid "Volume"
+msgstr "مستوى الصوت"
+
+#. placeholder {0}: profile.name
+#: ../../client/src/home/routes/screen-home.tsx:38
+msgid "Welcome, {0}"
+msgstr "مرحباً، {0}"
+
+#: ../../client/src/home/routes/screen-home.tsx:39
+msgid "Welcome, Human"
+msgstr "مرحباً، أيها الإنسان"
+
+#: ../../client/src/app/routes/menu/index.tsx:56
+#: ../../client/src/app/routes/menu/index.tsx:142
+msgid "World"
+msgstr "العالم"
+
+#: ../../client/src/app/hooks/use-device.ts:43
+msgid "You are offline"
+msgstr "أنت غير متصل"
+
+#: ../../client/src/app/hooks/use-device.ts:41
+msgid "You are online"
+msgstr "أنت متصل"
+
+#: ../../client/src/app/routes/screen-settings.tsx:38
+msgid "Your name to display in the app."
+msgstr "اسمك للعرض في التطبيق."
+
+#: ../../client/src/app/hooks/use-settings.ts:84
+msgid "Your prompt history has been reset."
+msgstr "تم إعادة تعيين سجل المطالبات الخاص بك."
+
+#: ../../client/src/media/hooks/use-media-controls.ts:121
+msgid "Zoom in"
+msgstr "تكبير"
+
+#: ../../client/src/media/hooks/use-media-controls.ts:132
+msgid "Zoom out"
+msgstr "تصغير"
