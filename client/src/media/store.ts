@@ -7,8 +7,6 @@ export type Media = {
   selected: string[],
   dragging: string[],
   renaming: string[],
-  copying: string[],
-  moving: string[],
   lists: {
     main: string[],
     temp: string[],
@@ -23,8 +21,6 @@ export default createSlice({
     selected: [],
     dragging: [],
     renaming: [],
-    copying: [],
-    moving: [],
     lists: {
       main: [],
       temp: [],
@@ -36,8 +32,6 @@ export default createSlice({
     getSelected: (media) => media.selected,
     getDragging: (media) => media.dragging,
     getRenaming: (media) => media.renaming,
-    getCopying: (media) => media.copying,
-    getMoving: (media) => media.moving,
   },
   reducers: {
     layout(media, action: PayloadAction<'list' | 'grid'>) {

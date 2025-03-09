@@ -21,9 +21,10 @@ export function Embed(props: EmbedProps) {
       <Media
         {...{name, ext, path, layout}}
         close={() => null}
+        standalone={false}
         vertical={false}
-        embedded
         maximized
+        embedded
       />
     </View>
   );

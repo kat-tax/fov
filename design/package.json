@@ -24,6 +24,9 @@
       "import": "./styles.ts",
       "require": "./gen/native/styles.js"
     },
+    "./fonts.css": {
+      "import": "./fonts.css"
+    },
     "./gen.theme": {
       "import": "./gen/web/theme.js",
       "require": "./gen/native/theme.js"
@@ -39,7 +42,7 @@
     "@lingui/react": "^5.2.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-exo": "0.18.27",
+    "react-exo": "0.18.37",
     "react-native": "^0.76.5",
     "react-native-svg": "^15.10.1",
     "react-native-unistyles": "^2.20.0",

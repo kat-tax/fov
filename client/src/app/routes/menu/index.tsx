@@ -1,4 +1,3 @@
-import {View, ScrollView} from 'react-native';
 import {toast} from 'react-exo/toast';
 import {scan} from 'react-scan';
 import {useState} from 'react';
@@ -7,6 +6,7 @@ import {useLocation} from 'react-exo/navigation';
 import {useFocusable, FocusContext} from '@noriginmedia/norigin-spatial-navigation';
 import {useStyles, createStyleSheet} from 'react-native-unistyles';
 import {useImportHfs} from 'media/dir/hooks/use-import-hfs';
+import {View, ScrollView} from 'react-native';
 import {StorageWidget} from 'media/stacks/widgets/storage';
 
 import {MenuHeader} from './menu-header';
@@ -26,7 +26,7 @@ export function Menu(props: MenuProps) {
   const {styles} = useStyles(stylesheet);
   const {pathname} = useLocation();
   const [showScanner, setShowScanner] = useState(false);
-  const {importFile, createFolder} = useImportHfs();
+  const {createFolder, importFile} = useImportHfs();
   const {ref, focusKey} = useFocusable({
     isFocusBoundary: true,
     focusBoundaryDirections: ['up', 'down'],
@@ -100,7 +100,7 @@ export function Menu(props: MenuProps) {
                   id: 'import',
                   icon: 'ph:upload',
                   label: t`Import Files`,
-                  onPress: importFile,
+                  onPress: () => importFile(),
                 },
               ]}>
               <MenuItem

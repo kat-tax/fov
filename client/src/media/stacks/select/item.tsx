@@ -60,7 +60,7 @@ export function SelectItem(props: SelectItemProps) {
   useEffect(() => {
     (async () => {
       setDir(!path.includes('://')
-        ? await hfs?.isDirectory?.(path) ?? false
+        ? await hfs?.isDirectory?.(path || '.') ?? false
         : false);
     })();
   }, [hfs, path]);

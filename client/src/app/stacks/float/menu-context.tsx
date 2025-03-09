@@ -3,7 +3,6 @@ import {Icon} from 'react-exo/icon';
 import {useStyles} from 'react-native-unistyles';
 
 import type {ComponentProps} from 'react';
-import type {GestureResponderEvent} from 'react-native';
 
 export interface MenuContextProps extends ComponentProps<typeof Z['Root']> {
   label: string,
@@ -64,82 +63,90 @@ export const Root = Z.create((props: ComponentProps<typeof Z['Root']>) => {
 
 export const Content = Z.create((props: ComponentProps<typeof Z['Content']>) => {
   return (
-    <Z.Content className="ContextMenuContent" {...props}/>
+    <Z.Content className="ContextMenuContent context" {...props}/>
   )
 }, 'Content');
 
 export const Trigger = Z.create((props: ComponentProps<typeof Z['Trigger']>) => {
   return (
-    <Z.Trigger className="ContextMenuTrigger" {...props}/>
+    <Z.Trigger className="ContextMenuTrigger context" {...props}/>
   )
 }, 'Trigger');
 
+export const Sub = Z.create((props: ComponentProps<typeof Z['Sub']>) => {
+  return (
+    <Z.Sub {...props}/>
+  )
+}, 'Sub');
+
+export const SubContent = Z.create((props: ComponentProps<typeof Z['SubContent']>) => {
+  return (
+    <Z.SubContent className="ContextMenuSubContent context" {...props}/>
+  )
+}, 'SubContent');
+
 export const SubTrigger = Z.create((props: ComponentProps<typeof Z['SubTrigger']>) => {
   return (
-    <Z.SubTrigger className="ContextMenuSubTrigger" {...props}/>
+    <Z.SubTrigger className="ContextMenuSubTrigger context" {...props}/>
   )
 }, 'SubTrigger');
 
 export const Item = Z.create((props: ComponentProps<typeof Z['Item']>) => {
   return (
-    <Z.Item className={`ContextMenuItem ${props.destructive ? 'ContextMenuItemDestructive' : ''}`} {...props}/>
+    <Z.Item className={`ContextMenuItem context ${props.destructive ? 'ContextMenuItemDestructive' : ''}`} {...props}/>
   )
 }, 'Item');
 
 export const ItemTitle = Z.create((props: ComponentProps<typeof Z['ItemTitle']>) => {
   return (
-    <Z.ItemTitle className="ContextMenuItemTitle" {...props}/>
+    <Z.ItemTitle className="ContextMenuItemTitle context" {...props}/>
   )
 }, 'ItemTitle');
 
 export const ItemSubtitle = Z.create((props: ComponentProps<typeof Z['ItemSubtitle']>) => {
   return (
-    <Z.ItemSubtitle className="ContextMenuItemSubtitle" {...props}/>
+    <Z.ItemSubtitle className="ContextMenuItemSubtitle context" {...props}/>
   )
 }, 'ItemSubtitle');
+
 export const ItemIcon = Z.create((props: ComponentProps<typeof Z['ItemIcon']>) => {
   return (
-    <Z.ItemIcon className="ContextMenuItemIcon" {...props}/>
+    <Z.ItemIcon className="ContextMenuItemIcon context" {...props}/>
   )
 }, 'ItemIcon');
 
 export const ItemImage = Z.create((props: ComponentProps<typeof Z['ItemImage']>) => {
   return (
-    <Z.ItemImage className="ContextMenuItemImage" {...props}/>
+    <Z.ItemImage className="ContextMenuItemImage context" {...props}/>
   )
 }, 'ItemImage');
 
 export const ItemIndicator = Z.create((props: ComponentProps<typeof Z['ItemIndicator']>) => {
   return (
-    <Z.ItemIndicator className="ContextMenuItemIndicator" {...props}/>
+    <Z.ItemIndicator className="ContextMenuItemIndicator context" {...props}/>
   )
 }, 'ItemIndicator');
 
 export const Arrow = Z.create((props: ComponentProps<typeof Z['Arrow']>) => {
   return (
-    <Z.Arrow className="ContextMenuArrow" {...props}/>
+    <Z.Arrow className="ContextMenuArrow context" {...props}/>
   )
 }, 'Arrow');
 
 export const Label = Z.create((props: ComponentProps<typeof Z['Label']>) => {
   return (
-    <Z.Label className="ContextMenuLabel" {...props}/>
+    <Z.Label className="ContextMenuLabel context" {...props}/>
   )
 }, 'Label');
 
 export const Separator = Z.create((props: ComponentProps<typeof Z['Separator']>) => {
   return (
-    <Z.Separator className="ContextMenuSeparator" {...props}/>
+    <Z.Separator className="ContextMenuSeparator context" {...props}/>
   )
 }, 'Separator');
 
 export const CheckboxItem = Z.create((props: ComponentProps<typeof Z['CheckboxItem']>) => {
   return (
-    <Z.CheckboxItem className="ContextMenuCheckboxItem" {...props}/>
+    <Z.CheckboxItem className="ContextMenuCheckboxItem context" {...props}/>
   )
 }, 'CheckboxItem');
-
-export const isZeego = (event?: GestureResponderEvent) => {
-  // @ts-expect-error Workaround for Zeego clicking the trigger component
-  if (event?.target?.className === 'ContextMenuItemTitle') return true;
-}

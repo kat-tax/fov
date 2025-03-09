@@ -35,6 +35,7 @@ export default forwardRef((
       bios={`/.bios/${platform}.bin`}
       style={styles.root}
       startOnLoaded={!embedded}
+      threads
     />
   ) : null;
 });

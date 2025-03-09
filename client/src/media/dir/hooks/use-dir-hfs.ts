@@ -2,7 +2,7 @@ import {useNavigate} from 'react-exo/navigation';
 import {useState, useCallback, useMemo, useEffect} from 'react';
 import {useHfs, useHfsWatch} from 'app/data/lib/hfs-provider';
 import {usePut, useGet} from 'app/data/store';
-import {isZeego} from 'app/stacks/float/menu-context';
+import {isZeego} from 'app/stacks/float';
 import {getData} from 'media/file/utils/data';
 import media from 'media/store';
 

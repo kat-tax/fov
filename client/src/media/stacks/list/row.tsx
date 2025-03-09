@@ -3,6 +3,7 @@ import {View, Text} from 'react-native';
 import {Thumb} from 'media/stacks/thumb';
 import {bytesize} from 'app/utils/formatting';
 import {useMediaName} from 'media/hooks/use-media-name';
+import {ThumbSize} from 'media/stacks/thumb';
 
 import type {HfsOpt} from 'media/dir/types/hfs';
 
@@ -24,7 +25,11 @@ export function ListRow(props: ListRow) {
   const {name, size, ext, dir, opt, img} = props;
   const {focused, selected, dragging, dropping} = opt ?? {};
   const isGrid = opt?.layout === 'grid';
-  const thumbSize = isGrid ? 4 : __TOUCH__ ? 1 : 0;
+  const thumbSize = isGrid
+    ? ThumbSize.MD
+    : __TOUCH__
+      ? ThumbSize.SM 
+      : ThumbSize.XS;
   const vstyles = {
     root: [
       styles.root,

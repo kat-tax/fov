@@ -47,7 +47,7 @@ export default function ScreenSettings() {
           </PanelItem>
           <PanelItem
             label={t`Owner Key`}
-            description={t`A mnemonic phrase for authentication.`}>
+            description={t`The passphrase for your database.`}>
             <TextInput
               style={styles.input}
               selectTextOnFocus
@@ -58,7 +58,12 @@ export default function ScreenSettings() {
               importantForAutofill="no"
               autoCapitalize="none"
               autoComplete="off"
+              spellCheck={false}
+              passwordRules="none"
               autoCorrect={false}
+              onSubmitEditing={(e) => {
+                console.log('>>>', e);
+              }}
               onFocus={() => setShowKey(true)}
               onBlur={e => {
                 setShowKey(false);
@@ -102,6 +107,38 @@ export default function ScreenSettings() {
               <Picker.Item label={t`Dark`} value="dark" color={theme.colors.foreground}/>
             </Picker>
           </PanelItem>
+        </PanelSection>
+        <PanelSection title={t`Intelligence`}>
+          <PanelItem
+            label={t`AI Provider`}
+            description={t`Provide a key to use AI features.`}>
+            <TextInput
+              style={styles.input}
+              secureTextEntry
+              selectTextOnFocus
+              placeholder={'<api key>'}
+              defaultValue={settings.profile?.groqKey?.toString()}
+              placeholderTextColor={theme.colors.mutedForeground}
+              onBlur={e => settings.updateGroqKey(e.nativeEvent.text)}
+            />
+          </PanelItem>
+          <PanelItem
+            label={t`AI Model`}
+            description={t`Select your preferred AI model.`}>
+            <Picker
+              style={styles.select}
+              itemStyle={styles.selectItem}
+              dropdownIconColor={theme.colors.foreground}
+              selectedValue={settings.profile?.groqModel?.toString()}
+              onValueChange={settings.updateGroqModel}>
+              <Picker.Item label="llama3-8b" value="llama3-8b-8192" color={theme.colors.foreground}/>
+              <Picker.Item label="llama3-70b" value="llama3-70b-8192" color={theme.colors.foreground}/>
+              <Picker.Item label="mixtral-8x7b" value="mixtral-8x7b-32768" color={theme.colors.foreground}/>
+              <Picker.Item label="gemma-7b" value="gemma-7b-it" color={theme.colors.foreground}/>
+            </Picker>
+          </PanelItem>
+        </PanelSection>
+        <PanelSection title={t`Weather`}>
           <PanelItem
             label={t`Temperature`}
             description={t`Select the temperature unit for the app.`}>
@@ -115,9 +152,11 @@ export default function ScreenSettings() {
               <Picker.Item label={t`Fahrenheit`} value="f" color={theme.colors.foreground}/>
             </Picker>
           </PanelItem>
+        </PanelSection>
+        <PanelSection title={t`Map`}>
           <PanelItem
-            label={t`Distance`}
-            description={t`Select the distance unit for the app.`}>
+            label={t`Distance Unit`}
+            description={t`Select your preferred unit for distances.`}>
             <Picker
               style={styles.select}
               itemStyle={styles.selectItem}
@@ -128,39 +167,9 @@ export default function ScreenSettings() {
               <Picker.Item label={t`Miles`} value="mi" color={theme.colors.foreground}/>
             </Picker>
           </PanelItem>
-        </PanelSection>
-        <PanelSection title={t`Services`}>
           <PanelItem
-            label={t`Groq API Key`}
-            description={t`Provide a key to use AI features.`}>
-            <TextInput
-              style={styles.input}
-              secureTextEntry
-              selectTextOnFocus
-              placeholder={'<groq api key>'}
-              defaultValue={settings.profile?.groqKey?.toString()}
-              placeholderTextColor={theme.colors.mutedForeground}
-              onBlur={e => settings.updateGroqKey(e.nativeEvent.text)}
-            />
-          </PanelItem>
-          <PanelItem
-            label={t`Groq Model ID`}
-            description={t`Select the AI model to use.`}>
-            <Picker
-              style={styles.select}
-              itemStyle={styles.selectItem}
-              dropdownIconColor={theme.colors.foreground}
-              selectedValue={settings.profile?.groqModel?.toString()}
-              onValueChange={settings.updateGroqModel}>
-              <Picker.Item label="llama3-8b" value="llama3-8b-8192" color={theme.colors.foreground}/>
-              <Picker.Item label="llama3-70b" value="llama3-70b-8192" color={theme.colors.foreground}/>
-              <Picker.Item label="mixtral-8x7b" value="mixtral-8x7b-32768" color={theme.colors.foreground}/>
-              <Picker.Item label="gemma-7b" value="gemma-7b-it" color={theme.colors.foreground}/>
-            </Picker>
-          </PanelItem>
-          <PanelItem
-            label={t`Maptiler URL`}
-            description={t`Provide a url to use map features.`}>
+            label={t`Tile Server`}
+            description={t`Provide a url the map tile server.`}>
             <TextInput
               style={styles.input}
               selectTextOnFocus
@@ -171,8 +180,8 @@ export default function ScreenSettings() {
             />
           </PanelItem>
           <PanelItem
-            label={t`Maptiler API Key`}
-            description={t`Provide a key to use map features.`}>
+            label={t`Tile Key`}
+            description={t`Provide a key for the map tile server.`}>
             <TextInput
               style={styles.input}
               secureTextEntry
@@ -183,6 +192,8 @@ export default function ScreenSettings() {
               onBlur={e => settings.updateMaptilerKey(e.nativeEvent.text)}
             />
           </PanelItem>
+        </PanelSection>
+        <PanelSection title={t`Chat`}>
           <PanelItem
             label={t`Matrix User ID`}
             description={t`Provide a matrix user to use social features.`}>

@@ -31,7 +31,8 @@ export default function Layout() {
   const focused = useGet(media.selectors.getFocused);
   const isVert = screen.width < theme.breakpoints.sm;
   const hasTabs = screen.width < theme.breakpoints.xs;
-  const hasPanel = (pathname.includes('/browse') && !isVert) || Boolean(focused);
+  const hasPanel = (!isVert && pathname.includes('/browse'))
+    || (Boolean(focused) && !pathname.includes('/settings'));
   const vstyles = {
     root: [styles.root, hasTabs && styles.rootTabs],
     menu: [styles.menu, hasTabs && styles.menuTabs],
@@ -69,6 +70,7 @@ export default function Layout() {
           <Media
             {...toPath(focused || pathname, false)}
             vertical={isVert}
+            standalone={false}
             maximized={true}
             embedded={false}
             close={() => {}}
