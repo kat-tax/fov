@@ -106,37 +106,37 @@ export function Menu(props: MenuProps) {
               <MenuItem
                 label={t`Files`}
                 icon="ph:folder"
-                path="/browse"
+                path="/browse/local"
               />
               <MenuItem
                 label={t`Docs`}
                 icon="ph:file-text"
-                path="/browse/documents"
+                path="/browse/local/documents"
               />
               <MenuItem
                 label={t`Music`}
                 icon="ph:music-notes"
-                path="/browse/music"
+                path="/browse/local/music"
               />
               <MenuItem
                 label={t`Pictures`}
                 icon="ph:image"
-                path="/browse/pictures"
+                path="/browse/local/pictures"
               />
               <MenuItem
                 label={t`Videos`}
                 icon="ph:video"
-                path="/browse/videos"
+                path="/browse/local/videos"
               />
               <MenuItem
                 label={t`Games`}
                 icon="ph:game-controller"
-                path="/browse/games"
+                path="/browse/local/games"
               />
               <MenuItem
                 label={t`Books`}
                 icon="ph:book-open-text"
-                path="/browse/books"
+                path="/browse/local/books"
               />
             </MenuGroup>
             <MenuGroup label={t`World`}>

@@ -65,7 +65,6 @@ msgstr "무엇이든 물어보세요..."
 msgid "Auto"
 msgstr "자동"
 
-#: ../../client/src/media/hooks/use-media-name.ts:23
 #: ../../client/src/app/routes/menu/index.tsx:137
 msgid "Books"
 msgstr "도서"
@@ -74,7 +73,6 @@ msgstr "도서"
 msgid "by {0}"
 msgstr "{0} 저"
 
-#: ../../client/src/world/routes/screen-world.tsx:29
 #: ../../client/src/app/routes/menu/index.tsx:154
 msgid "Calendar"
 msgstr "달력"
@@ -149,7 +147,6 @@ msgstr "프롬프트 삭제"
 msgid "Delete the local database."
 msgstr "로컬 데이터베이스 삭제"
 
-#: ../../client/src/dev/routes/screen-design.tsx:14
 #: ../../client/src/app/routes/menu/index.tsx:188
 msgid "Design"
 msgstr "디자인"
@@ -226,11 +223,7 @@ msgstr "화씨"
 msgid "Feature in development..."
 msgstr "개발 중인 기능..."
 
-#: ../../client/src/media/stacks/media.tsx:89
 #: ../../client/src/media/stacks/list/bar.tsx:54
-#: ../../client/src/media/hooks/use-media-name.ts:25
-#: ../../client/src/app/routes/menu/index.tsx:51
-#: ../../client/src/app/routes/menu/index.tsx:107
 msgid "Files"
 msgstr "파일"
 
@@ -242,7 +235,6 @@ msgstr "파일시스템"
 msgid "Fullscreen"
 msgstr "전체화면"
 
-#: ../../client/src/media/hooks/use-media-name.ts:21
 #: ../../client/src/app/routes/menu/index.tsx:132
 msgid "Games"
 msgstr "게임"
@@ -296,7 +288,6 @@ msgstr "킬로미터"
 msgid "Language"
 msgstr "언어"
 
-#: ../../client/src/dev/routes/screen-library.tsx:20
 #: ../../client/src/app/routes/menu/index.tsx:193
 msgid "Library"
 msgstr "라이브러리"
@@ -317,8 +308,6 @@ msgstr "설정 관리"
 msgid "Manage your storage"
 msgstr "저장소 관리"
 
-#: ../../client/src/world/routes/screen-world.tsx:17
-#: ../../client/src/app/routes/screen-settings.tsx:156
 #: ../../client/src/app/routes/menu/index.tsx:144
 msgid "Map"
 msgstr "지도"
@@ -347,12 +336,10 @@ msgstr "마일"
 msgid "Move"
 msgstr "이동"
 
-#: ../../client/src/media/hooks/use-media-name.ts:15
 #: ../../client/src/app/routes/menu/index.tsx:117
 msgid "Music"
 msgstr "음악"
 
-#: ../../client/src/world/routes/screen-world.tsx:23
 #: ../../client/src/app/routes/menu/index.tsx:149
 msgid "News"
 msgstr "뉴스"
@@ -385,7 +372,6 @@ msgstr "소유자 키"
 msgid "Pause"
 msgstr "일시정지"
 
-#: ../../client/src/media/hooks/use-media-name.ts:17
 #: ../../client/src/app/routes/menu/index.tsx:122
 msgid "Pictures"
 msgstr "사진"
@@ -478,7 +464,6 @@ msgstr ""
 msgid "Select your preferred unit for distances."
 msgstr ""
 
-#: ../../client/src/app/routes/screen-settings.tsx:24
 #: ../../client/src/app/routes/menu/index.tsx:61
 #: ../../client/src/app/routes/menu/index.tsx:210
 msgid "Settings"
@@ -497,7 +482,6 @@ msgstr "뒤로 건너뛰기"
 msgid "Skip forward"
 msgstr "앞으로 건너뛰기"
 
-#: ../../client/src/app/routes/screen-storage.tsx:23
 #: ../../client/src/app/routes/menu/index.tsx:204
 msgid "Storage"
 msgstr "저장소"
@@ -546,7 +530,6 @@ msgstr "지원되지 않는 파일"
 msgid "User Name"
 msgstr "사용자 이름"
 
-#: ../../client/src/media/hooks/use-media-name.ts:19
 #: ../../client/src/app/routes/menu/index.tsx:127
 msgid "Videos"
 msgstr "동영상"

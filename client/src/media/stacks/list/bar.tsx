@@ -51,12 +51,12 @@ export function ListBar({path, actions}: ListBarProps) {
           contentContainerStyle={styles.breadcrumbs}>
           {path ? (
             <>
-              <ListBarItem name={t`Files`} path="/browse"/>
+              <ListBarItem name={t`Files`} path="/browse/local"/>
               <ListBarItemSeparator/>
             </>
           ) : null}
           {items?.map((name, index, array) => {
-            const path = array.slice(0, index + 1).join('/');
+            const path = ['local', ...array.slice(0, index + 1)].join('/');
             const last = index === array.length - 1;
             return (
               <View key={path} style={styles.breadcrumb}>
@@ -83,7 +83,7 @@ export function ListBarItem({name, path, last, scroll}: {
   scroll?: React.RefObject<ScrollView>,
 }) {
   const nav = useNavigate();
-  const goto = useCallback(() => nav(path ?? name ?? '/browse'), [nav, path, name]);
+  const goto = useCallback(() => nav(path ?? name ?? '/browse/local'), [nav, path, name]);
   const title = useMediaName(name);
 
   const {ref, focused} = useFocusable({

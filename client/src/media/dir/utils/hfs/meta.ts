@@ -19,8 +19,8 @@ export async function getThumbnail(path: string, item: HfsFileEntry) {
   switch (type) {
     case FileType.Image:
       return getCroppedImage(url);
-    case FileType.Game:
-      return getGameBoxArt(renderer.platform, info.name);
+    // case FileType.Game:
+    //   return getGameBoxArt(renderer.platform, info.name);
     default:
       return null;
   }

@@ -65,7 +65,6 @@ msgstr "Ask anything..."
 msgid "Auto"
 msgstr "Auto"
 
-#: ../../client/src/media/hooks/use-media-name.ts:23
 #: ../../client/src/app/routes/menu/index.tsx:137
 msgid "Books"
 msgstr "Books"
@@ -74,7 +73,6 @@ msgstr "Books"
 msgid "by {0}"
 msgstr "by {0}"
 
-#: ../../client/src/world/routes/screen-world.tsx:29
 #: ../../client/src/app/routes/menu/index.tsx:154
 msgid "Calendar"
 msgstr "Calendar"
@@ -149,7 +147,6 @@ msgstr "Delete Prompts"
 msgid "Delete the local database."
 msgstr "Delete the local database."
 
-#: ../../client/src/dev/routes/screen-design.tsx:14
 #: ../../client/src/app/routes/menu/index.tsx:188
 msgid "Design"
 msgstr "Design"
@@ -226,11 +223,7 @@ msgstr "Fahrenheit"
 msgid "Feature in development..."
 msgstr "Feature in development..."
 
-#: ../../client/src/media/stacks/media.tsx:89
 #: ../../client/src/media/stacks/list/bar.tsx:54
-#: ../../client/src/media/hooks/use-media-name.ts:25
-#: ../../client/src/app/routes/menu/index.tsx:51
-#: ../../client/src/app/routes/menu/index.tsx:107
 msgid "Files"
 msgstr "Files"
 
@@ -242,7 +235,6 @@ msgstr "Filesystem"
 msgid "Fullscreen"
 msgstr "Fullscreen"
 
-#: ../../client/src/media/hooks/use-media-name.ts:21
 #: ../../client/src/app/routes/menu/index.tsx:132
 msgid "Games"
 msgstr "Games"
@@ -296,7 +288,6 @@ msgstr "Kilometers"
 msgid "Language"
 msgstr "Language"
 
-#: ../../client/src/dev/routes/screen-library.tsx:20
 #: ../../client/src/app/routes/menu/index.tsx:193
 msgid "Library"
 msgstr "Library"
@@ -317,8 +308,6 @@ msgstr "Manage your settings"
 msgid "Manage your storage"
 msgstr "Manage your storage"
 
-#: ../../client/src/world/routes/screen-world.tsx:17
-#: ../../client/src/app/routes/screen-settings.tsx:156
 #: ../../client/src/app/routes/menu/index.tsx:144
 msgid "Map"
 msgstr "Map"
@@ -347,12 +336,10 @@ msgstr "Miles"
 msgid "Move"
 msgstr "Move"
 
-#: ../../client/src/media/hooks/use-media-name.ts:15
 #: ../../client/src/app/routes/menu/index.tsx:117
 msgid "Music"
 msgstr "Music"
 
-#: ../../client/src/world/routes/screen-world.tsx:23
 #: ../../client/src/app/routes/menu/index.tsx:149
 msgid "News"
 msgstr "News"
@@ -385,7 +372,6 @@ msgstr "Owner Key"
 msgid "Pause"
 msgstr "Pause"
 
-#: ../../client/src/media/hooks/use-media-name.ts:17
 #: ../../client/src/app/routes/menu/index.tsx:122
 msgid "Pictures"
 msgstr "Pictures"
@@ -478,7 +464,6 @@ msgstr "Select your preferred AI model."
 msgid "Select your preferred unit for distances."
 msgstr "Select your preferred unit for distances."
 
-#: ../../client/src/app/routes/screen-settings.tsx:24
 #: ../../client/src/app/routes/menu/index.tsx:61
 #: ../../client/src/app/routes/menu/index.tsx:210
 msgid "Settings"
@@ -497,7 +482,6 @@ msgstr "Skip backward"
 msgid "Skip forward"
 msgstr "Skip forward"
 
-#: ../../client/src/app/routes/screen-storage.tsx:23
 #: ../../client/src/app/routes/menu/index.tsx:204
 msgid "Storage"
 msgstr "Storage"
@@ -546,7 +530,6 @@ msgstr "Unsupported File"
 msgid "User Name"
 msgstr "User Name"
 
-#: ../../client/src/media/hooks/use-media-name.ts:19
 #: ../../client/src/app/routes/menu/index.tsx:127
 msgid "Videos"
 msgstr "Videos"
