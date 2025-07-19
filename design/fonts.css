@@ -1,0 +1,18 @@
+@font-face {
+  font-family: 'InterVariable';
+  src: url('./assets/font/Inter.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fira Code';
+  src: url('./assets/font/FiraCode.woff2') format('woff2-variations');
+  font-weight: 100 900;
+  font-stretch: 75% 125%;
+  font-style: normal;
+  font-display: swap;
+  font-feature-settings: 'calt' 1, 'ss01' 1;
+}

@@ -19,7 +19,7 @@
     "storybook:build": "pnpm -F ./toolkit/storybook/web run build",
     "storybook:native": "pnpm -F ./toolkit/storybook/native run start",
     "storybook:web": "pnpm -F ./toolkit/storybook/web run start",
-    "docs:_start": "pnpm -F ./toolkit/vocs start",
+    "docs:start": "pnpm -F ./toolkit/vocs start",
     "docs:_build": "pnpm -F ./toolkit/vocs build",
     "server:_start": "pnpm -F ./server run start",
     "generate": "pnpm config:build && pnpm translate:build && pnpm bundler:build && pnpm design:build",
@@ -27,11 +27,10 @@
   },
   "devDependencies": {
     "@lingui/cli": "^5.2.0",
-    "@qrgrid/core": "^0.2.2",
-    "cli-cursor": "^3.0.0",
-    "concurrently": "^9.1.2",
+    "@qrgrid/core": "^0.2.3",
+    "cli-cursor": "^5.0.0",
+    "concurrently": "^9.2.0",
     "strip-ansi": "^7.1.0",
-    "yocto-spinner": "^0.1.2",
     "yoctocolors": "^2.1.1"
   },
   "engines": {

@@ -1,20 +1,3 @@
-export async function observe(path: string, callback: (records: unknown[]) => void) {
-  try {
-    // @ts-expect-error FileSystemObserver is new
-    const $ = new FileSystemObserver(async (records, observer) => {
-      console.log('>> fs [event]', records, observer);
-      callback(records);
-    });
-    const root = await navigator.storage.getDirectory();
-    const dir = !!path && await root.getDirectoryHandle(path);
-    await $.observe(dir || root, {recursive: false});
-    return () => $.disconnect();
-  } catch (e) {
-   console.warn('>> fs [observe error]', e);
-   return false;
-  }
-}
-
 export async function poll(path: string, delta: number) {
   try {
     const meta = await metadata(path, false);

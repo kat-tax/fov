@@ -30,13 +30,17 @@ msgstr "{files, plural, one {# archivo} other {# archivos}}"
 msgid "{folders, plural, one {# folder} other {# folders}}"
 msgstr "{folders, plural, one {# carpeta} other {# carpetas}}"
 
-#: ../../client/src/app/routes/screen-settings.tsx:217
+#: ../../client/src/app/routes/screen-settings.tsx:228
 msgid "<matrix access token>"
 msgstr "<token de acceso matrix>"
 
-#: ../../client/src/app/routes/screen-settings.tsx:50
-msgid "A mnemonic phrase for authentication."
-msgstr "Una frase mnemotécnica para autenticación."
+#: ../../client/src/app/routes/screen-settings.tsx:126
+msgid "AI Model"
+msgstr ""
+
+#: ../../client/src/app/routes/screen-settings.tsx:113
+msgid "AI Provider"
+msgstr ""
 
 #: ../../client/src/app/hooks/use-settings.ts:96
 msgid "Are you sure you want to change the owner key? This will reset the local database. This action cannot be undone."
@@ -58,8 +62,8 @@ msgstr "¿Estás seguro de que quieres reiniciar tu historial de prompts?"
 msgid "Ask anything..."
 msgstr "Pregunta lo que quieras..."
 
-#: ../../client/src/app/routes/screen-settings.tsx:80
-#: ../../client/src/app/routes/screen-settings.tsx:100
+#: ../../client/src/app/routes/screen-settings.tsx:85
+#: ../../client/src/app/routes/screen-settings.tsx:105
 msgid "Auto"
 msgstr "Automático"
 
@@ -78,9 +82,13 @@ msgstr "por {0}"
 msgid "Calendar"
 msgstr "Calendario"
 
-#: ../../client/src/app/routes/screen-settings.tsx:114
+#: ../../client/src/app/routes/screen-settings.tsx:151
 msgid "Celsius"
 msgstr "Celsius"
+
+#: ../../client/src/app/routes/screen-settings.tsx:196
+msgid "Chat"
+msgstr ""
 
 #: ../../client/src/media/hooks/use-media-controls.ts:298
 msgid "Close"
@@ -99,7 +107,7 @@ msgstr "Copiar"
 msgid "Create Folder"
 msgstr "Crear Carpeta"
 
-#: ../../client/src/app/routes/screen-settings.tsx:102
+#: ../../client/src/app/routes/screen-settings.tsx:107
 msgid "Dark"
 msgstr "Oscuro"
 
@@ -108,11 +116,11 @@ msgstr "Oscuro"
 msgid "Dashboard"
 msgstr "Panel"
 
-#: ../../client/src/app/routes/screen-settings.tsx:224
+#: ../../client/src/app/routes/screen-settings.tsx:235
 msgid "Data"
 msgstr "Datos"
 
-#: ../../client/src/app/routes/screen-settings.tsx:236
+#: ../../client/src/app/routes/screen-settings.tsx:247
 msgid "Database"
 msgstr "Base de datos"
 
@@ -120,27 +128,27 @@ msgstr "Base de datos"
 msgid "Delete"
 msgstr "Eliminar"
 
-#: ../../client/src/app/routes/screen-settings.tsx:247
+#: ../../client/src/app/routes/screen-settings.tsx:258
 msgid "Delete all local files."
 msgstr "Eliminar todos los archivos locales."
 
-#: ../../client/src/app/routes/screen-settings.tsx:227
+#: ../../client/src/app/routes/screen-settings.tsx:238
 msgid "Delete all local prompt data."
 msgstr "Eliminar todos los datos de prompts locales."
 
-#: ../../client/src/app/routes/screen-settings.tsx:239
+#: ../../client/src/app/routes/screen-settings.tsx:250
 msgid "Delete Database"
 msgstr "Eliminar Base de Datos"
 
-#: ../../client/src/app/routes/screen-settings.tsx:249
+#: ../../client/src/app/routes/screen-settings.tsx:260
 msgid "Delete Filesystem"
 msgstr "Eliminar Sistema de Archivos"
 
-#: ../../client/src/app/routes/screen-settings.tsx:229
+#: ../../client/src/app/routes/screen-settings.tsx:240
 msgid "Delete Prompts"
 msgstr "Eliminar Prompts"
 
-#: ../../client/src/app/routes/screen-settings.tsx:237
+#: ../../client/src/app/routes/screen-settings.tsx:248
 msgid "Delete the local database."
 msgstr "Eliminar la base de datos local."
 
@@ -165,13 +173,13 @@ msgstr "Directorio vacío. Suelta elementos o selecciona carpeta para importar."
 msgid "Directory empty. Select folder to import."
 msgstr "Directorio vacío. Selecciona carpeta para importar."
 
-#: ../../client/src/app/routes/screen-settings.tsx:70
+#: ../../client/src/app/routes/screen-settings.tsx:75
 msgid "Display"
 msgstr "Pantalla"
 
-#: ../../client/src/app/routes/screen-settings.tsx:119
-msgid "Distance"
-msgstr "Distancia"
+#: ../../client/src/app/routes/screen-settings.tsx:158
+msgid "Distance Unit"
+msgstr ""
 
 #: ../../client/src/app/routes/menu/index.tsx:112
 msgid "Docs"
@@ -213,7 +221,7 @@ msgstr "Ingresa nombre"
 msgid "Extract"
 msgstr "Extraer"
 
-#: ../../client/src/app/routes/screen-settings.tsx:115
+#: ../../client/src/app/routes/screen-settings.tsx:152
 msgid "Fahrenheit"
 msgstr "Fahrenheit"
 
@@ -221,15 +229,15 @@ msgstr "Fahrenheit"
 msgid "Feature in development..."
 msgstr "Función en desarrollo..."
 
-#: ../../client/src/media/stacks/media.tsx:88
-#: ../../client/src/media/stacks/list/bar.tsx:52
+#: ../../client/src/media/stacks/media.tsx:89
+#: ../../client/src/media/stacks/list/bar.tsx:54
 #: ../../client/src/media/hooks/use-media-name.ts:25
 #: ../../client/src/app/routes/menu/index.tsx:51
 #: ../../client/src/app/routes/menu/index.tsx:107
 msgid "Files"
 msgstr "Archivos"
 
-#: ../../client/src/app/routes/screen-settings.tsx:246
+#: ../../client/src/app/routes/screen-settings.tsx:257
 msgid "Filesystem"
 msgstr "Sistema de archivos"
 
@@ -258,19 +266,11 @@ msgstr "Buenas noches"
 msgid "Good morning"
 msgstr "Buenos días"
 
-#: ../../client/src/app/routes/screen-settings.tsx:134
-msgid "Groq API Key"
-msgstr "Clave API de Groq"
-
 #: ../../client/src/home/hooks/use-ai.tsx:44
 msgid "Groq Failure"
 msgstr "Error de Groq"
 
-#: ../../client/src/app/routes/screen-settings.tsx:147
-msgid "Groq Model ID"
-msgstr "ID del Modelo Groq"
-
-#: ../../client/src/app/routes/menu/menu-header.tsx:27
+#: ../../client/src/app/routes/menu/menu-header.tsx:30
 msgid "Human"
 msgstr "Humano"
 
@@ -287,11 +287,15 @@ msgstr "Importar Carpeta"
 msgid "Inbox"
 msgstr "Notificaciones"
 
-#: ../../client/src/app/routes/screen-settings.tsx:127
+#: ../../client/src/app/routes/screen-settings.tsx:111
+msgid "Intelligence"
+msgstr ""
+
+#: ../../client/src/app/routes/screen-settings.tsx:166
 msgid "Kilometers"
 msgstr "Kilómetros"
 
-#: ../../client/src/app/routes/screen-settings.tsx:72
+#: ../../client/src/app/routes/screen-settings.tsx:77
 msgid "Language"
 msgstr "Idioma"
 
@@ -300,7 +304,7 @@ msgstr "Idioma"
 msgid "Library"
 msgstr "Biblioteca"
 
-#: ../../client/src/app/routes/screen-settings.tsx:101
+#: ../../client/src/app/routes/screen-settings.tsx:106
 msgid "Light"
 msgstr "Claro"
 
@@ -317,27 +321,20 @@ msgid "Manage your storage"
 msgstr "Administra tu almacenamiento"
 
 #: ../../client/src/world/routes/screen-world.tsx:17
+#: ../../client/src/app/routes/screen-settings.tsx:156
 #: ../../client/src/app/routes/menu/index.tsx:144
 msgid "Map"
 msgstr "Mapa"
 
-#: ../../client/src/app/routes/screen-settings.tsx:174
-msgid "Maptiler API Key"
-msgstr "Clave API de Maptiler"
-
-#: ../../client/src/app/routes/screen-settings.tsx:162
-msgid "Maptiler URL"
-msgstr "URL de Maptiler"
-
-#: ../../client/src/app/routes/screen-settings.tsx:211
+#: ../../client/src/app/routes/screen-settings.tsx:222
 msgid "Matrix Access Token"
 msgstr "Token de Acceso Matrix"
 
-#: ../../client/src/app/routes/screen-settings.tsx:199
+#: ../../client/src/app/routes/screen-settings.tsx:210
 msgid "Matrix Base URL"
 msgstr "URL Base de Matrix"
 
-#: ../../client/src/app/routes/screen-settings.tsx:187
+#: ../../client/src/app/routes/screen-settings.tsx:198
 msgid "Matrix User ID"
 msgstr "ID de Usuario Matrix"
 
@@ -345,7 +342,7 @@ msgstr "ID de Usuario Matrix"
 msgid "Media"
 msgstr "Medios"
 
-#: ../../client/src/app/routes/screen-settings.tsx:128
+#: ../../client/src/app/routes/screen-settings.tsx:167
 msgid "Miles"
 msgstr "Millas"
 
@@ -420,33 +417,33 @@ msgstr "Perfil"
 msgid "Prompt History Reset"
 msgstr "Historial de Prompts Reiniciado"
 
-#: ../../client/src/app/routes/screen-settings.tsx:226
+#: ../../client/src/app/routes/screen-settings.tsx:237
 msgid "Prompts"
 msgstr "Prompts"
 
-#: ../../client/src/app/routes/screen-settings.tsx:200
+#: ../../client/src/app/routes/screen-settings.tsx:211
 msgid "Provide a base url to use social features."
 msgstr "Proporciona una URL base para usar funciones sociales."
 
-#: ../../client/src/app/routes/screen-settings.tsx:135
+#: ../../client/src/app/routes/screen-settings.tsx:184
+msgid "Provide a key for the map tile server."
+msgstr ""
+
+#: ../../client/src/app/routes/screen-settings.tsx:114
 msgid "Provide a key to use AI features."
 msgstr "Proporciona una clave para usar las funciones de IA."
 
-#: ../../client/src/app/routes/screen-settings.tsx:175
-msgid "Provide a key to use map features."
-msgstr "Proporciona una clave para usar funciones de mapa."
-
-#: ../../client/src/app/routes/screen-settings.tsx:188
+#: ../../client/src/app/routes/screen-settings.tsx:199
 msgid "Provide a matrix user to use social features."
 msgstr "Proporciona un usuario matrix para usar funciones sociales."
 
-#: ../../client/src/app/routes/screen-settings.tsx:212
+#: ../../client/src/app/routes/screen-settings.tsx:223
 msgid "Provide a token to use social features."
 msgstr "Proporciona un token para usar funciones sociales."
 
-#: ../../client/src/app/routes/screen-settings.tsx:163
-msgid "Provide a url to use map features."
-msgstr "Proporciona una URL para usar funciones de mapa."
+#: ../../client/src/app/routes/screen-settings.tsx:172
+msgid "Provide a url the map tile server."
+msgstr ""
 
 #: ../../client/src/media/dir/stacks/menu-hfs.tsx:69
 msgid "Rename"
@@ -464,29 +461,25 @@ msgstr "Buscar"
 msgid "Select all"
 msgstr "Seleccionar todo"
 
-#: ../../client/src/app/routes/screen-settings.tsx:148
-msgid "Select the AI model to use."
-msgstr "Selecciona el modelo de IA a usar."
-
-#: ../../client/src/app/routes/screen-settings.tsx:120
-msgid "Select the distance unit for the app."
-msgstr "Selecciona la unidad de distancia para la aplicación."
-
-#: ../../client/src/app/routes/screen-settings.tsx:73
+#: ../../client/src/app/routes/screen-settings.tsx:78
 msgid "Select the language for the app."
 msgstr "Selecciona el idioma para la aplicación."
 
-#: ../../client/src/app/routes/screen-settings.tsx:107
+#: ../../client/src/app/routes/screen-settings.tsx:144
 msgid "Select the temperature unit for the app."
 msgstr "Selecciona la unidad de temperatura para la aplicación."
 
-#: ../../client/src/app/routes/screen-settings.tsx:93
+#: ../../client/src/app/routes/screen-settings.tsx:98
 msgid "Select the theme for the app."
 msgstr "Selecciona el tema para la aplicación."
 
-#: ../../client/src/app/routes/screen-settings.tsx:132
-msgid "Services"
-msgstr "Servicios"
+#: ../../client/src/app/routes/screen-settings.tsx:127
+msgid "Select your preferred AI model."
+msgstr ""
+
+#: ../../client/src/app/routes/screen-settings.tsx:159
+msgid "Select your preferred unit for distances."
+msgstr ""
 
 #: ../../client/src/app/routes/screen-settings.tsx:24
 #: ../../client/src/app/routes/menu/index.tsx:61
@@ -516,17 +509,29 @@ msgstr "Almacenamiento"
 msgid "Storage used and available on this device."
 msgstr "Almacenamiento usado y disponible en este dispositivo."
 
-#: ../../client/src/app/routes/screen-settings.tsx:106
+#: ../../client/src/app/routes/screen-settings.tsx:143
 msgid "Temperature"
 msgstr "Temperatura"
 
-#: ../../client/src/app/routes/screen-settings.tsx:92
+#: ../../client/src/app/routes/screen-settings.tsx:50
+msgid "The passphrase for your database."
+msgstr ""
+
+#: ../../client/src/app/routes/screen-settings.tsx:97
 msgid "Theme"
 msgstr "Tema"
 
 #: ../../client/src/media/file/file-binary.tsx:35
 msgid "This file can not be previewed."
 msgstr "Este archivo no se puede previsualizar."
+
+#: ../../client/src/app/routes/screen-settings.tsx:183
+msgid "Tile Key"
+msgstr ""
+
+#: ../../client/src/app/routes/screen-settings.tsx:171
+msgid "Tile Server"
+msgstr ""
 
 #: ../../client/src/app/routes/menu/index.tsx:177
 msgid "Toggle Dev Mode"
@@ -564,6 +569,10 @@ msgstr "Ver tus últimas noticias y feeds RSS"
 #: ../../client/src/media/hooks/use-media-controls.ts:231
 msgid "Volume"
 msgstr "Volumen"
+
+#: ../../client/src/app/routes/screen-settings.tsx:141
+msgid "Weather"
+msgstr ""
 
 #. placeholder {0}: profile.name
 #: ../../client/src/home/routes/screen-home.tsx:38

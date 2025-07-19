@@ -14,6 +14,7 @@ export default function ScreenIpfs() {
         {...{name, ext, url, path}}
         close={() => null}
         embedded={false}
+        standalone
         maximized
         vertical
       />

@@ -23,11 +23,13 @@ export function MenuHeader(props: MenuProps) {
           linkable
         />
         <View style={styles.info}>
-          <Text style={styles.name} selectable={false}>
+          <Text
+            style={styles.name}
+            numberOfLines={1}
+            ellipsizeMode="tail">
             {profile?.name ?? t`Human`}
           </Text>
         </View>
-        <View style={styles.fill}/>
         <Pressable onPress={(e) => {e.preventDefault()}}>
           <Icon
             name="ph:magnifying-glass"
@@ -51,10 +53,8 @@ const stylesheet = createStyleSheet(theme => ({
     paddingEnd: theme.display.space1,
     paddingStart: 6,
   },
-  fill: {
-    flex: 1,
-  },
   info: {
+    flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
     gap: theme.display.space1,
@@ -63,9 +63,9 @@ const stylesheet = createStyleSheet(theme => ({
     userSelect: 'none',
     fontWeight: '500',
     fontFamily: theme.font.family,
-    fontSize: theme.font.size,
-    lineHeight: theme.font.height,
-    letterSpacing: theme.font.spacing,
+    fontSize: theme.font.contentSize,
+    lineHeight: theme.font.contentHeight,
+    letterSpacing: theme.font.contentSpacing,
     color: theme.colors.foreground,
   },
 }));

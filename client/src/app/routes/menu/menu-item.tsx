@@ -38,7 +38,7 @@ export function MenuItem(props: MenuItemProps) {
         {props.icon &&
           <Icon
             name={props.icon}
-            size={isAction ? 14 : 16}
+            size={isAction ? 14 : __TOUCH__ ? 20 : 16}
             color={props.color
               || ((isAction && isActive)
                 ? theme.colors.foreground
@@ -57,6 +57,7 @@ export function MenuItem(props: MenuItemProps) {
 
 const stylesheet = createStyleSheet(theme => ({
   item: {
+    gap: 6,
     flexDirection: 'row',
     alignItems: 'center',
     borderRadius: theme.display.radius1,
@@ -76,14 +77,12 @@ const stylesheet = createStyleSheet(theme => ({
   },
   label: {
     userSelect: 'none',
-    marginHorizontal: theme.display.space1,
     color: theme.colors.secondaryForeground,
-    lineHeight: 24,
-    fontSize: 11,
+    fontSize: 13,
+    lineHeight: 26,
     ...__TOUCH__ && {
-      marginLeft: theme.display.space2,
-      lineHeight: 40,
-      fontSize: 13,
+      fontSize: theme.font.contentSize,
+      lineHeight: 38,
     },
   },
 }));

@@ -40,8 +40,10 @@ export function toTimeRange(from: number, to: number) {
 }
 
 export function toPath(url: string, isDirectory: boolean) {
-  // Normalize path to use forward slashes (remove /browse prefix)
-  const _path = decodeURIComponent(url).replace(/^\/browse\/?/, '').replace(/\\/g, '/');
+  const _path = decodeURIComponent(url)
+    .replace(/^\/browse\/local/, '')
+    .replace(/^\/browse\/ipfs/, '')
+    .replace(/\\/g, '/');
   // Split path into parts
   const parts = _path.split('/').filter(Boolean);
   // Get the last part (could be filename or folder name)

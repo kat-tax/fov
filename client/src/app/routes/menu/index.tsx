@@ -1,4 +1,3 @@
-import {View, ScrollView} from 'react-native';
 import {toast} from 'react-exo/toast';
 import {scan} from 'react-scan';
 import {useState} from 'react';
@@ -7,6 +6,7 @@ import {useLocation} from 'react-exo/navigation';
 import {useFocusable, FocusContext} from '@noriginmedia/norigin-spatial-navigation';
 import {useStyles, createStyleSheet} from 'react-native-unistyles';
 import {useImportHfs} from 'media/dir/hooks/use-import-hfs';
+import {View, ScrollView} from 'react-native';
 import {StorageWidget} from 'media/stacks/widgets/storage';
 
 import {MenuHeader} from './menu-header';
@@ -26,7 +26,7 @@ export function Menu(props: MenuProps) {
   const {styles} = useStyles(stylesheet);
   const {pathname} = useLocation();
   const [showScanner, setShowScanner] = useState(false);
-  const {importFile, createFolder} = useImportHfs();
+  const {createFolder, importFile} = useImportHfs();
   const {ref, focusKey} = useFocusable({
     isFocusBoundary: true,
     focusBoundaryDirections: ['up', 'down'],
@@ -100,43 +100,43 @@ export function Menu(props: MenuProps) {
                   id: 'import',
                   icon: 'ph:upload',
                   label: t`Import Files`,
-                  onPress: importFile,
+                  onPress: () => importFile(),
                 },
               ]}>
               <MenuItem
                 label={t`Files`}
                 icon="ph:folder"
-                path="/browse"
+                path="/browse/local"
               />
               <MenuItem
                 label={t`Docs`}
                 icon="ph:file-text"
-                path="/browse/documents"
+                path="/browse/local/documents"
               />
               <MenuItem
                 label={t`Music`}
                 icon="ph:music-notes"
-                path="/browse/music"
+                path="/browse/local/music"
               />
               <MenuItem
                 label={t`Pictures`}
                 icon="ph:image"
-                path="/browse/pictures"
+                path="/browse/local/pictures"
               />
               <MenuItem
                 label={t`Videos`}
                 icon="ph:video"
-                path="/browse/videos"
+                path="/browse/local/videos"
               />
               <MenuItem
                 label={t`Games`}
                 icon="ph:game-controller"
-                path="/browse/games"
+                path="/browse/local/games"
               />
               <MenuItem
                 label={t`Books`}
                 icon="ph:book-open-text"
-                path="/browse/books"
+                path="/browse/local/books"
               />
             </MenuGroup>
             <MenuGroup label={t`World`}>

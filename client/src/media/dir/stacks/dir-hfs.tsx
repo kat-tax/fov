@@ -9,11 +9,12 @@ export function DirHfs({hfs, cmd, ext, bar}: HfsCtx) {
   return (
     <List
       items={list}
+      path={path}
       data={ext}
       opts={{
         layout,
         preview: tmp,
-        header: bar ? {path, actions: bar?.actions} : undefined,
+        header: bar ? {actions: bar?.actions} : undefined,
       }}
       render={({item, index}) => {
         const self = path ? `${path}/${item.name}` : item.name;

@@ -19,13 +19,14 @@ interface MediaProps {
   name: string,
   path: string,
   embedded: boolean,
-  vertical: boolean,
+  standalone: boolean,
   maximized: boolean,
+  vertical: boolean,
   layout?: [number, number],
   close: () => void,
 }
 
-export function Media({ext, name, path, vertical, maximized, embedded, layout, close}: MediaProps) {
+export function Media({ext, name, path, vertical, maximized, embedded, standalone, layout, close}: MediaProps) {
   const {styles, theme} = useStyles(stylesheet);
   const file = useRef<FileRef>(null);
   const pip = useMediaPictInPict(ext, layout);
@@ -101,7 +102,9 @@ export function Media({ext, name, path, vertical, maximized, embedded, layout, c
 
   return (
     <View style={vstyles.root}>
-      {!embedded && <SelectTabs {...{hfs, path, name, ext}}/>}
+      {!embedded && !standalone && 
+        <SelectTabs {...{hfs, path, name, ext}}/>
+      }
       <ScrollView style={vstyles.frame} contentContainerStyle={styles.contents}>
         <File
           ref={file}

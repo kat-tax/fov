@@ -28,5 +28,11 @@ export default defineConfig(env => mergeConfig(
         globals: {process: true},
       }),
     ],
+    server: {
+      headers: {
+        'Cross-Origin-Opener-Policy': 'same-origin',
+        'Cross-Origin-Embedder-Policy': 'require-corp',
+      },
+    },
   }),
 ));

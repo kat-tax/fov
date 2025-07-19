@@ -1,11 +1,13 @@
 import {View, ScrollView} from 'react-native';
 import {Icon} from 'react-exo/icon';
+import {Motion} from 'react-exo/motion';
 import {useLingui} from '@lingui/react/macro';
 import {useNavigate} from 'react-exo/navigation';
-import {useCallback, useEffect, useRef} from 'react';
+import {useCallback, useEffect, useRef, useState} from 'react';
 import {useStyles, createStyleSheet} from 'react-native-unistyles';
 import {useFocusable, FocusContext} from '@noriginmedia/norigin-spatial-navigation';
 import {useMediaName} from 'media/hooks/use-media-name';
+import {MenuDropdown} from 'app/stacks/float';
 import {ButtonText} from 'app/stacks/button/text';
 import {ButtonIcon} from 'app/stacks/button/icon';
 
@@ -49,12 +51,12 @@ export function ListBar({path, actions}: ListBarProps) {
           contentContainerStyle={styles.breadcrumbs}>
           {path ? (
             <>
-              <ListBarItem name={t`Files`} path="/browse"/>
+              <ListBarItem name={t`Files`} path="/browse/local"/>
               <ListBarItemSeparator/>
             </>
           ) : null}
           {items?.map((name, index, array) => {
-            const path = array.slice(0, index + 1).join('/');
+            const path = ['local', ...array.slice(0, index + 1)].join('/');
             const last = index === array.length - 1;
             return (
               <View key={path} style={styles.breadcrumb}>
@@ -81,7 +83,7 @@ export function ListBarItem({name, path, last, scroll}: {
   scroll?: React.RefObject<ScrollView>,
 }) {
   const nav = useNavigate();
-  const goto = useCallback(() => nav(path ?? name ?? '/browse'), [nav, path, name]);
+  const goto = useCallback(() => nav(path ?? name ?? '/browse/local'), [nav, path, name]);
   const title = useMediaName(name);
 
   const {ref, focused} = useFocusable({
@@ -110,19 +112,63 @@ export function ListBarItem({name, path, last, scroll}: {
 }
 
 export function ListBarAction({id, icon, onPress}: ListBarAction) {
+  const [open, setOpen] = useState(false);
   const {ref, focused} = useFocusable({
-    onEnterPress: onPress,
+    onEnterPress: () => setOpen(true),
     focusKey: `bar@${id}`,
   });
 
   return (
-    <ButtonIcon
-      vref={ref}
-      icon={icon}
-      size={ICON_SIZE}
-      state={focused ? 'Focused' : 'Default'}
-      onPress={onPress}
-    />
+    <MenuDropdown label={id} open={open} onOpenChange={setOpen} items={[
+      {
+        name: 'new-folder',
+        label: 'New Folder',
+        icon: 'ph:folder-plus',
+        action: onPress,
+      },
+      {
+        name: 'divider',
+        label: '-',
+      },
+      {
+        name: 'import',
+        label: 'Import…',
+        icon: 'ph:upload',
+        sub: [
+          {
+            name: 'import-folder',
+            label: 'Folder',
+            icon: 'ph:folder',
+            action: onPress,
+          },
+          {
+            name: 'import-files',
+            label: 'Files',
+            icon: 'ph:file',
+            action: onPress,
+          },
+          {
+            name: 'import-camera',
+            label: 'Cam',
+            icon: 'ph:camera',
+            action: onPress,
+          },
+        ],
+      },
+    ]}>
+      <Motion.View
+        ref={ref}
+        initial={{rotate: '0deg'}}
+        animate={{rotate: open ? '45deg' : '0deg'}}
+        transition={{type: 'spring', speed: 100}}>
+        <ButtonIcon
+          icon={icon}
+          size={ICON_SIZE}
+          state={focused ? 'Focused' : 'Default'}
+          onPress={onPress}
+        />
+      </Motion.View>
+    </MenuDropdown>
   );
 }
 

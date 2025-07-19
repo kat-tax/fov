@@ -1,21 +1,19 @@
 import {useStyles, createStyleSheet} from 'react-native-unistyles';
 import {useWindowDimensions, View} from 'react-native';
-// import {usePut, useGet} from 'app/data/store';
+import {useEffect} from 'react';
+import {useParams} from 'react-exo/navigation';
 import {useDirHfs} from 'media/dir/hooks/use-dir-hfs';
 import {usePath} from 'app/hooks/use-path';
 import {DirHfs} from 'media/dir/stacks/dir-hfs';
 import {Panel} from 'app/stacks/panel';
-// import media from 'media/store';
 
 export default function ScreenBrowse() {
   const screen = useWindowDimensions();
   const {path} = usePath();
+  const {backend} = useParams<{backend: string}>();
   const {hfs, cmd, ext} = useDirHfs(path);
   const {theme, styles} = useStyles(stylesheet);
   const isVertical = screen.width < theme.breakpoints.sm;
-
-  // const layout = useGet(media.selectors.getLayout);
-  // const put = usePut();
 
   const bar = {
     actions: [
@@ -24,18 +22,14 @@ export default function ScreenBrowse() {
         icon: 'ph:plus',
         onPress: () => {},
       },
-      // {
-      //   id: 'options',
-      //   icon: 'ph:faders',
-      //   onPress: () => {},
-      // },
-      // {
-      //   id: 'layout',
-      //   icon: layout === 'grid' ? 'ph:square-split-vertical' : 'ph:squares-four',
-      //   onPress: () => put(media.actions.layout(layout === 'grid' ? 'list' : 'grid')),
-      // },
     ],
   };
+
+  useEffect(() => {
+    if (backend) {
+      console.log('>> backend', backend);
+    }
+  }, [backend]);
 
   return (
     <View style={[styles.root, !isVertical && styles.rootAside]}>

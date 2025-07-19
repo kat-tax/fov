@@ -41,7 +41,7 @@ export function SelectItem(props: SelectItemProps) {
 
   const goto = useCallback(() => {
     const parent = path.split('/').slice(0, -1).join('/');
-    const uri = parent ? `/browse/${parent}` : '/browse';
+    const uri = parent ? `/browse/local/${parent}` : '/browse/local';
     if (uri === pathname) return;
     nav(uri);
   }, [path, pathname, nav]);
@@ -60,7 +60,7 @@ export function SelectItem(props: SelectItemProps) {
   useEffect(() => {
     (async () => {
       setDir(!path.includes('://')
-        ? await hfs?.isDirectory?.(path) ?? false
+        ? await hfs?.isDirectory?.(path || '.') ?? false
         : false);
     })();
   }, [hfs, path]);

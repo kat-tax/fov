@@ -1,17 +1,13 @@
 import {FS} from 'react-exo/fs';
-import {observe, poll} from 'media/dir/utils/hfs/fs';
+import {poll} from 'media/dir/utils/hfs/fs';
 import {useContext, useEffect, useState, createContext} from 'react';
 
-import type {HfsImpl, HfsType} from 'react-exo/fs';
+import type {HfsImpl} from 'react-exo/fs';
 
 const HfsContext = createContext<HfsContextType | null>(null);
 const $ = new Map<string, {callbacks: Set<WatchFn>, disconnect: () => void}>();
 
 export type WatchFn = () => void;
-
-export interface HfsProviderProps {
-  type?: HfsType;
-}
 
 export interface HfsContextType {
   fs: HfsImpl | null;
@@ -30,11 +26,11 @@ export function useHfsWatch(path: string, fn: WatchFn) {
   useEffect(() => ctx.watch(path, fn), [path, fn, ctx]);
 }
 
-export function HfsProvider({type, children}: React.PropsWithChildren<HfsProviderProps>) {
+export function HfsProvider({children}: React.PropsWithChildren) {
   const [fs, setFs] = useState<HfsImpl | null>(null);
 
   const register = async (path: string) => {
-    const disconnect = await observe(path, () => {
+    const disconnect = await FS.watch(path, () => {
       const callbacks = $.get(path)?.callbacks;
       if (!callbacks) return;
       for (const c of callbacks) c();
@@ -71,15 +67,19 @@ export function HfsProvider({type, children}: React.PropsWithChildren<HfsProvide
       if (!callbacks) return;
       callbacks.delete(fn);
       if (callbacks.size === 0) {
-        $.get(path)?.disconnect();
+        try {
+          $.get(path)?.disconnect();
+        } catch (e) {}
         $.delete(path);
       }
     };
   };
 
-  useEffect(() => {(async () =>
-    setFs(await FS.init(type)))();
-  }, [type]);
+  useEffect(() => {
+    (async () => {
+      setFs(await FS.init('local'));
+    })();
+  }, []);
 
   return (
     <HfsContext.Provider value={{fs, watch}}>
